@@ -80,5 +80,4 @@ fun main() {
 //  part2(input).println()
 //  check(part2(input) == ???)
 
-// low 7509
 }
