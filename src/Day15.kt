@@ -1,5 +1,3 @@
-import kotlin.reflect.typeOf
-
 fun main() {
 
   fun part1(input: List<String>): Int {
