@@ -69,16 +69,8 @@ fun main() {
   }
 
   fun calculateBoardStrength(board: String): Int {
-    val duplicateCards = mutableMapOf<Char, Int>()
-    for (card in board) {
-      if (duplicateCards.containsKey(card)) {
-        duplicateCards[card] = duplicateCards[card]!! + 1
-      } else {
-        duplicateCards[card] = 1
-      }
-    }
-
-    return getBoardStrength(duplicateCards)
+      val duplicateCards = board.groupingBy { it }.eachCount()
+      return getBoardStrength(duplicateCards.toMutableMap())
   }
 
   fun calculateBoardStrengthWithJoker(board: String): Int {
